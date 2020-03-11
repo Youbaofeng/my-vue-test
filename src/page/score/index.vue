@@ -1,12 +1,12 @@
 <template>
   	<div>
     	<div class="your_scores_container">
-            <header class="your_scores"><span class="score_num">{{score}}</span><span class="fenshu">分！</span></header>
+            <header class="your_scores"><span class="score_num">{{score}}</span><span class="fenshu">%</span></header>
             <div class="result_tip">{{scoreTips}}</div>
         </div>
         <div class="share_button" @click="showCover"></div>
         <div class="share_code">
-            <header class="share_header">关注葡萄之家，获取答案。</header>
+            <header class="share_header">扫描二维码获取答案</header>
             <img src="../../images/4-4.png" height="212" width="212" class="code_img"> 
         </div>
         <div class="share_cover" v-show="showHide" @click="showCover">
@@ -22,10 +22,10 @@ export default {
     data(){
         return {
             showHide: false, //是否显示提示
-            score: 0, //分数
+            score: 100, //分数
             scoreTips:'', //分数提示
             rightAnswer: [2, 7, 12, 13, 18], //正确答案
-            scoreTipsArr:['你说，是不是把知识都还给小学老师了？','还不错，但还需要继续加油哦！','不要嘚瑟还有进步的空间！','智商离爆表只差一步了！','你也太聪明啦，葡萄之家欢迎你！'],
+            scoreTipsArr:['曙光即将来到！~','小伙子长得帅可别大意！','疫情防护要记心！','您就别给国家添乱啦！','方舱医院伙食挺好！','出去了就没打算活着回来'],
         }
     },
     computed: mapState(['answerid']),
@@ -39,7 +39,7 @@ export default {
         computedScore(){
             this.answerid.forEach((item, index) => {
                 if (item == this.rightAnswer[index]) {
-                    this.score += 20;
+                    this.score -= 20;
                 }
             })
         },
@@ -49,7 +49,7 @@ export default {
         },
         //根据分数显示提示
         getScoreTip: function (){
-          let index = Math.ceil(this.score/20)-1;
+          let index = Math.ceil(this.score/20);
           this.scoreTips = this.scoreTipsArr[index];
         }
     },
@@ -110,8 +110,9 @@ export default {
             color: #664718;
             font-size: 0.475rem;
             font-family: 'Microsoft YaHei';
-            width: 7rem;
+            width: 5.3rem;
             font-weight: 500;
+            text-align: center;
         }
         .code_img{
             height: 5.3rem;

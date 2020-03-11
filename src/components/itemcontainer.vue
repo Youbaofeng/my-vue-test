@@ -2,7 +2,7 @@
   	<section>
     	<header class="top_tips">
     		<span class="num_tip" v-if="fatherComponent == 'home'">{{level}}</span>
-    		<span class="num_tip" v-if="fatherComponent == 'item'">题目{{itemNum}}</span>
+    		<span class="num_tip" v-if="fatherComponent == 'item'">考题{{itemNum}}</span>
     	</header>
     	<div v-if="fatherComponent == 'home'" >
     		<div class="home_logo item_container_style"></div>
@@ -126,11 +126,10 @@ export default {
 	}	
 	.home_logo{
 		background-image: url(../images/1-2.png);
-		background-size: 13.142rem 100%;
+		background-size: 13.142rem 8rem;
 		background-position: right center;
 	}
 	.item_back{
-		background-image: url(../images/2-1.png);
 		background-size: 100% 100%;
 	}
 	.button_style{
@@ -163,8 +162,9 @@ export default {
     }
 	.item_title{
 		font-size: 0.65rem;
-		color: #00e;
+		color: #fff;
 		line-height: 0.7rem;
+		font-weight: bold;
 	}
 	.item_list{
 		font-size: 0;
@@ -173,7 +173,8 @@ export default {
 		span{
 			display: inline-block;
 			font-size: 0.6rem;
-			color: #00e;
+			color: #fff;
+			font-weight: bold;
 			vertical-align: middle;
 		}
 		.option_style{
@@ -188,9 +189,9 @@ export default {
 			font-family: 'Arial';
 		}
 		.has_choosed{
-			background-color: #ffd400;
+			background-color: #fff;
 			color: #575757;
-			border-color: #ffd400;
+			border-color: #fff;
 		}
 		.option_detail{
 			width: 7.5rem;

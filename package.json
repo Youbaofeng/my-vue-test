@@ -1,8 +1,8 @@
 {
-  "name": "happyfri",
+  "name": "vue2-test",
   "version": "1.0.2",
-  "description": "vue2-happyfri",
-  "author": "cangdu <1264889788@qq.com>",
+  "description": "vue2-test",
+  "author": "will you <469254676@qq.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
