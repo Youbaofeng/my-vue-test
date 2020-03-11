@@ -18,7 +18,7 @@
 git clone https://github.com/Youbaofeng/my-vue-test
 
 # 进入文件夹
-cd vue2-happyfri
+cd vue2-covid19
 
 # 安装依赖
 npm install 或 yarn(推荐)
