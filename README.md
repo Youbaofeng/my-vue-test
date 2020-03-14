@@ -18,10 +18,10 @@
 git clone https://github.com/Youbaofeng/my-vue-test
 
 # 进入文件夹
-cd vue2-covid19
+cd my-vue-test
 
 # 安装依赖
-npm install 或 yarn(推荐)
+npm install 
 
 # 开启本地服务器localhost:8088
 npm run dev
